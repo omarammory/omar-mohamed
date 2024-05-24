@@ -482,7 +482,7 @@ header .section-1 .text-container .icons a:hover>i {
 
     header .section-1 .text-container {
         transform: translateY(200px);
-        gap: 24px;
+        gap: 18px;
         text-align: center;
         position: relative;
         bottom: 95px;
