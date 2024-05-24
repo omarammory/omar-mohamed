@@ -1,0 +1,1569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --main-color: white;
+    --second-color: #3ac9f4;
+    --third-color: black;
+    --main-transition: 300ms;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-decoration-line: none;
+    scroll-behavior: smooth;
+    list-style-type: none;
+}
+
+header {
+    height: 100vh;
+    background-color: var(--third-color);
+}
+
+nav {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+nav>#menu {
+    display: none;
+}
+
+nav #menu-wrong {
+    display: none;
+}
+
+nav h1 {
+    color: var(--second-color);
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li a::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.footer {
+    background-color: #102C57;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-title span {
+
+    color: #3a6cf4;
+}
+
+.footer .social-icons a {
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    color: #fff;
+}
+
+
+
+@media (min-width: 200px) and (max-width: 300px) {
+    nav ul li a {
+        color: var(--second-color);
+        font-size: 30px;
+    }
+
+    nav:hover ul {
+        opacity: 1;
+        right: 20px;
+    }
+
+    nav:hover>#menu-wrong {
+        color: var(--main-color);
+        display: block;
+        position: static;
+    }
+
+    nav #menu {
+        color: var(--main-color);
+        display: block;
+        font-size: 35px;
+    }
+
+    nav:hover #menu {
+        display: none;
+    }
+
+    nav #menu-wrong {
+        display: none;
+        font-size: 25px;
+        position: absolute;
+        left: 37px;
+    }
+
+
+    nav h1 {
+        font-size: 30px;
+        order: -1;
+        padding-right: 150px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        background-color: rgb(255, 255, 255, 0.5);
+        padding: 41px;
+        border-radius: 10px;
+        z-index: 11111;
+        opacity: 0;
+        right: 11111111px;
+    }
+
+    header .section-1 .image-container {
+        opacity: 1;
+        animation: productimg 5s ease 0s;
+    }
+
+    @keyframes productimg {
+        from {
+            transform: scale(1.4);
+            opacity: 0;
+        }
+
+    }
+
+
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+}
+
+
+
+
+@media (min-width: 301px) and (max-width: 500px) {
+    nav ul li a {
+        font-size: 35px;
+        color: var(--second-color);
+    }
+
+    nav:hover ul {
+        opacity: 1;
+        right: 2px;
+    }
+
+    nav:hover>#menu-wrong {
+        color: var(--main-color);
+        display: block;
+        position: static;
+    }
+
+    nav #menu {
+        color: var(--main-color);
+        display: block;
+        font-size: 40px;
+    }
+
+    nav:hover #menu {
+        display: none;
+    }
+
+    nav #menu-wrong {
+        display: none;
+        font-size: 30px;
+        position: absolute;
+        left: 37px;
+    }
+
+
+    nav h1 {
+        font-size: 35px;
+        order: -1;
+        padding-right: 150px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 90px;
+        background-color: rgb(255, 255, 255, 0.5);
+        padding: 85px;
+        border-radius: 10px;
+        z-index: 11111;
+        opacity: 0;
+        right: 111111px
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+    header .section-1 .image-container {
+        opacity: 1;
+        animation: productimg 5s ease 0s;
+    }
+
+    @keyframes productimg {
+        from {
+            transform: scale(1.4);
+            opacity: 0;
+        }
+
+    }
+
+    header .section-1 .image-container {
+        top: -90xp;
+    }
+
+
+}
+
+@media (min-width: 501px) and (max-width: 1000px) {
+    nav ul li a {
+        font-size: 25px;
+        color: var(--second-color);
+    }
+
+    nav h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* start-section-1 */
+header .section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header .section-1 .image-container {
+    background-image: url(images/omar.png);
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 85vh;
+}
+
+header .section-1 .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+header .section-1 .text-container .icon-animation i {
+    color: var(--second-color);
+    position: absolute;
+    right: 50px;
+    font-size: 30px;
+    top: -17px;
+    display: inline-block;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.2, 0.53, 0.81, 0.88);
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(80deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(80deg);
+    }
+}
+
+header .section-1 .text-container h2 {
+    color: var(--second-color);
+    font-size: 42px;
+    width: fit-content;
+    font-weight: 800;
+    position: relative;
+}
+
+header .section-1 .text-container h2::before {
+    content: "hello i'm omar mohamed";
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    font-family: cursive;
+}
+
+header .section-1 .text-container p {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 900;
+}
+
+header .section-1 .text-container>a {
+    color: #eee;
+    background-color: var(--second-color);
+    padding: 0.9375em 2.1875em;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 650;
+    border-radius: 15px;
+    white-space: pre;
+    position: relative;
+    transition: var(--main-transition);
+    z-index: 111;
+    display: inline-block;
+    letter-spacing: 1pxz;
+    transition: 1s;
+}
+
+
+
+header .section-1 .text-container>a:hover {
+    background-color: var(--second-color);
+    transform: scale(1.1);
+}
+
+header .section-1 .text-container>a:hover::before {
+    width: 100%;
+}
+
+header .section-1 .text-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    top: 5px;
+}
+
+header .section-1 .text-container .icons a i {
+    color: white;
+    font-size: 22px;
+    transition: var(--main-transition);
+}
+
+header .section-1 .text-container .icons a:hover>i {
+    font-size: 18px;
+}
+
+
+@media (min-width: 200px) and (max-width: 257px) {
+    header .section-1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    header .section-1 .image-container {
+        width: 100%;
+    }
+
+    header {
+        height: 1000px;
+    }
+
+    header .section-1 .text-container {
+        transform: translateY(155px);
+        gap: 15px;
+        text-align: center;
+    }
+
+    header .section-1 .text-container h2 {
+        font-size: 35px;
+    }
+
+    header .section-1 .text-container p {
+        font-size: 18px;
+    }
+
+    header .section-1 .text-container>a {
+        margin: auto;
+    }
+
+    header .section-1 .text-container>a:hover {
+        background-color: var(--second-color);
+        transform: scale(1.1);
+    }
+
+    header .section-1 .text-container .icons {
+        width: fit-content;
+        margin: auto;
+        top: 15px;
+    }
+
+    header .section-1 .text-container .icon-animation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-110px);
+    }
+
+    header .section-1 .text-container .icon-animation i {
+        position: relative !important;
+        left: 0;
+        top: 0;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 18px;
+        top: -70px;
+        left: 0;
+    }
+}
+
+
+@media (min-width: 258px) and (max-width: 500px) {
+    header .section-1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        transform: translateY(35px);
+    }
+
+    header .section-1 .image-container {
+        width: 100%;
+    }
+
+    header {
+        height: 1120px;
+
+    }
+
+    header .section-1 .text-container {
+        transform: translateY(200px);
+        gap: 24px;
+        text-align: center;
+        position: relative;
+        bottom: 95px;
+    }
+
+    header .section-1 .text-container h2 {
+        font-size: 35px;
+    }
+
+    header .section-1 .text-container p {
+        font-size: 21px;
+    }
+
+    header .section-1 .text-container>a {
+        margin: auto;
+    }
+
+    header .section-1 .text-container>a:hover {
+        background-color: var(--second-color);
+        transform: scale(1.1);
+    }
+
+    header .section-1 .text-container .icons {
+        width: fit-content;
+        margin: auto;
+        top: 15px;
+    }
+
+    header .section-1 .text-container .icon-animation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-110px);
+        position: relative;
+        top: 20px;
+    }
+
+    header .section-1 .text-container .icon-animation i {
+        position: relative !important;
+        left: 0;
+        top: 15px;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 21px;
+        top: -70px;
+        left: 0;
+    }
+
+}
+
+
+@media (min-width: 280px) and (max-width: 300px) {
+    header {
+        height: 1065px;
+    }
+}
+
+
+@media (min-width: 301px) and (max-width: 329px) {
+
+
+    header .section-1 .text-container p {
+        font-size: 22px;
+        width: 300px;
+        margin: auto;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 23px;
+        top: -70px;
+        left: 0;
+    }
+
+}
+
+@media (min-width: 330px) and (max-width: 343px) {
+
+
+    header .section-1 .text-container p {
+        font-size: 22px;
+        width: 300px;
+        margin: auto;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 24px;
+        top: -70px;
+        left: 0;
+    }
+
+    header .section-1 .text-container h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (min-width: 344px) and (max-width: 500px) {
+
+
+    header .section-1 .text-container p {
+        font-size: 22px;
+        width: 300px;
+        margin: auto;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 24px;
+        top: -70px;
+        left: 0;
+    }
+
+    header .section-1 .text-container h2 {
+        font-size: 41px;
+    }
+
+}
+
+@media (min-width: 344px) and (max-width: 370px) {
+    header {
+        height: 1400px;
+    }
+}
+
+
+@media (min-width: 358px) and (max-width: 372px) {
+    header .section-1 .text-container h2::before {
+        font-size: 25px;
+        top: -70px;
+        left: 0;
+    }
+}
+
+
+@media (min-width: 373px) and (max-width: 500px) {
+    header .section-1 .text-container h2::before {
+        font-size: 26px;
+        top: -85px;
+        left: 0;
+    }
+
+    header .section-1 .image-container {
+        width: 100%;
+        height: 600px;
+    }
+
+    header .section-1 {
+        transform: translateY(-5px);
+    }
+
+    header {
+        height: 1220px;
+    }
+}
+
+@media (min-width: 388px) and (max-width: 500px) {
+    header .section-1 .text-container h2::before {
+        font-size: 27px;
+        top: -80px;
+        left: 0;
+    }
+
+    header .section-1 .image-container {
+        width: 100%;
+        height: 600px;
+    }
+
+    header .section-1 {
+        transform: translateY(-5px);
+    }
+
+    header {
+        height: 1200px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 397px) {
+    header {
+        height: 1190px;
+    }
+}
+
+@media (min-width: 398px) and (max-width: 500px) {
+    header {
+        height: 1180px;
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 600px) {
+    header {
+        height: 1000px;
+    }
+
+    header .section-1 {
+        transform: translateY(-5px);
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    header .section-1 .text-container {
+        left: 20px;
+        top: 30px;
+    }
+
+    header .section-1 .image-container {
+        width: 70%;
+        height: 85vh;
+    }
+
+    header .section-1 .text-container h2::before {
+        font-size: 25px;
+        top: -70px;
+        left: 0;
+    }
+
+    header .section-1 .text-container h2 {
+        color: var(--second-color);
+        font-size: 35px;
+        width: fit-content;
+        font-weight: 800;
+        position: relative;
+    }
+
+    header .section-1 {
+        transform: translateY(-5px);
+    }
+
+    header .section-1 .text-container .icon-animation {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        transform: translate(104px, -20px);
+        width: 163px;
+    }
+
+    header .section-1 .text-container .icon-animation i {
+        position: relative !important;
+        left: 0;
+        top: 0;
+    }
+
+    header nav h1 {
+        padding-right: 200px;
+    }
+
+    nav ul li a {
+        color: var(--second-color);
+        font-size: 30px;
+    }
+
+    nav:hover ul {
+        opacity: 1;
+        right: 2px;
+    }
+
+    nav #menu-wrong {
+        display: none;
+        font-size: 30px;
+        position: absolute;
+        left: 37px;
+    }
+
+
+    nav:hover>#menu-wrong {
+        color: var(--main-color);
+        display: block;
+        position: static;
+    }
+
+    nav #menu {
+        color: var(--main-color);
+        display: block;
+        font-size: 40px;
+    }
+
+    nav:hover #menu {
+        display: none;
+    }
+
+
+
+    nav h1 {
+        font-size: 35px;
+        order: -1;
+        padding-right: 150px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 90px;
+        background-color: rgb(255, 255, 255, 0.5);
+        padding: 85px;
+        border-radius: 15px;
+        z-index: 11111;
+        opacity: 0;
+        right: 111111px
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 540px) and (max-width: 600px) {
+
+    header {
+        height: 950px;
+        align-items: center;
+        position: relative;
+    }
+
+    header .section-1 .image-container {
+        width: 50%;
+        height: 75vh;
+    }
+
+    header .section-1 .text-container {
+        position: relative;
+        padding-right: 80PX;
+    }
+
+
+
+    header nav h1 {
+        padding-right: 200px;
+    }
+
+    nav ul li a {
+        color: var(--second-color);
+        font-size: 30px;
+    }
+
+    nav:hover ul {
+        opacity: 1;
+        right: 2px;
+    }
+
+    nav:hover>#menu-wrong {
+        color: var(--main-color);
+        display: block;
+        position: static;
+    }
+
+    nav #menu {
+        color: var(--main-color);
+        display: block;
+        font-size: 40px;
+    }
+
+    nav:hover #menu {
+        display: none;
+    }
+
+    nav #menu-wrong {
+        display: none;
+        font-size: 30px;
+        position: absolute;
+        left: 37px;
+    }
+
+
+    nav h1 {
+        font-size: 35px;
+        order: -1;
+        padding-right: 150px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 90px;
+        background-color: rgb(255, 255, 255, 0.5);
+        padding: 85px;
+        border-radius: 10px;
+        z-index: 11111;
+        opacity: 0;
+        right: 111111px
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 669px) {
+    header .section-1 {
+        transform: translate(10px, 100px);
+    }
+
+    header {
+        height: 800px;
+        position: relative;
+        padding-left: 60px;
+    }
+
+    header .section-1 .text-container {
+        font-size: 20px;
+        align-items: center;
+        display: flex;
+        position: relative;
+        top: 110px;
+        padding-right: 60px;
+    }
+
+    header .section-1 .text-container h2 {
+        font-size: 50px;
+        position: relative;
+    }
+
+    main.sec-1 {
+        top: 80px;
+    }
+
+    header .section-1 .image-container {
+        background-image: url(images/omar.png);
+        background-size: cover;
+        background-position: center;
+        width: 27%;
+        height: 65vh;
+    }
+
+    nav ul li a {
+        color: var(--second-color);
+        font-size: 30px;
+    }
+
+    nav:hover ul {
+        opacity: 1;
+        right: 2px;
+    }
+
+    nav:hover>#menu-wrong {
+        color: var(--main-color);
+        display: block;
+        position: static;
+    }
+
+    nav #menu {
+        color: var(--main-color);
+        display: block;
+        font-size: 40px;
+    }
+
+    nav:hover #menu {
+        display: none;
+    }
+
+    nav #menu-wrong {
+        display: none;
+        font-size: 30px;
+        position: absolute;
+        left: 37px;
+    }
+
+
+    nav h1 {
+        font-size: 35px;
+        order: -1;
+        padding-right: 150px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 90px;
+        background-color: rgb(255, 255, 255, 0.5);
+        padding: 85px;
+        border-radius: 10px;
+        z-index: 11111;
+        opacity: 0;
+        right: 111111px
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1180px) {
+    header .section-1 .image-container {
+        width: 35%;
+        height: 55vh;
+        position: relative;
+        bottom: 10px;
+        top: -125px;
+
+    }
+
+    main {
+        height: 450px;
+    }
+
+    header .section-1 .text-container .icons {
+        position: relative;
+        top: -3px;
+        left: 20px;
+        gap: 20px;
+    }
+
+    header .section-1 {
+        transform: translate(10px, 135px);
+    }
+
+    header {
+        height: 600px;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        padding: 5rem;
+        height: 100px;
+
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1180px) {
+    header {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    header .section-1 {
+        transform: translateY(80px);
+    }
+
+    header .section-1 .image-container {
+        width: 35%;
+        height: 68vh;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    header {
+        height: 100vh;
+        background-color: var(--third-color);
+        width: 1025px;
+    }
+}
+
+
+/* end-section-1 */
+
+
+/* start-main */
+main {
+    transform: translateY(0px);
+}
+
+/* start-sec-1 */
+main .sec-1 {
+    transform: translateY(130px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .sec-1 h3 {
+    position: absolute;
+    font-size: 35px;
+    font-weight: 900;
+    color: #0553b3;
+    top: -80px;
+    width: 100%;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+main .sec-1 .image-container {
+    background-image: url('200w.gif');
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 300px;
+}
+
+main .sec-1 .flex-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main .sec-1 .flex-box>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px #00000063;
+    padding: 35px;
+    gap: 25px;
+    transition: var(--main-transition);
+    border-radius: 5px;
+    position: relative;
+}
+
+main .sec-1 .flex-box>div:hover {
+    transform: translateY(-10px);
+}
+
+main .sec-1 .flex-box>div:hover::before {
+    height: 100%;
+}
+
+main .sec-1 .flex-box>div::before {
+    content: '';
+    height: 0%;
+    width: 2px;
+    background-color: var(--second-color);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: var(--main-transition);
+}
+
+main .sec-1 .flex-box>div:hover::after {
+    height: 100%;
+}
+
+
+main .sec-1 .flex-box>div::after {
+    content: '';
+    height: 0%;
+    width: 2px;
+    background-color: var(--second-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: var(--main-transition);
+}
+
+main .sec-1 .flex-box>div:hover p::before {
+    width: 100%;
+}
+
+main .sec-1 .flex-box p::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: var(--main-transition);
+    transition-delay: 300ms;
+}
+
+main .sec-1 .flex-box>div:hover p::after {
+    width: 100%;
+}
+
+main .sec-1 .flex-box p::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--second-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: var(--main-transition);
+    transition-delay: 300ms;
+}
+
+main .sec-1 .flex-box i {
+    color: #0553b3;
+    font-size: 40px;
+}
+
+main .sec-1 .flex-box p {
+    color: var(--third-color);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main .sec-1 .flex-box a {
+    color: var(--third-color);
+    font-weight: 600;
+}
+
+@media (min-width: 200px) and (max-width:500px) {
+    main .sec-1 h3 {
+        position: absolute;
+        font-size: 28px;
+        top: -99px;
+    }
+
+    main .sec-1 {
+        transform: translateY(130px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    main .sec-1 .flex-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main .sec-1 .flex-box a {
+        font-size: 12px;
+    }
+
+    main .sec-1 .flex-box>div {
+        padding: 8px;
+        gap: 25px;
+    }
+
+    main .sec-1 .flex-box>div:first-child {
+        padding: 35px
+    }
+
+    main .sec-1 .image-container {
+        width: 190px;
+        height: 170px;
+        position: relative;
+        top: 15px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 700px) {
+    main {
+        height: 800px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 30px;
+        position: relative;
+        right: 1px;
+    }
+}
+
+@media (min-width: 351px) and (max-width: 700px) {
+    main {
+        height: 790px;
+    }
+}
+
+@media (min-width: 375px) and (max-width:400px) {
+    main {
+        height: 760px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 30px;
+        position: relative;
+        right: 1px;
+    }
+}
+
+@media (min-width: 360px) and (max-width:374px) {
+    main {
+        height: 760px;
+    }
+}
+
+@media (min-width: 220px) and (max-width:350px) {
+    main {
+        height: 790px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 25px;
+        position: relative;
+        right: 5px;
+    }
+
+
+}
+
+@media (min-width: 425px) and (max-width:500px) {
+    main {
+        height: 760px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 27px;
+        position: relative;
+        right: 5px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+    main .sec-1 h3 {
+        position: absolute;
+        font-size: 28px;
+        top: -99px;
+    }
+
+    main .sec-1 {
+        transform: translateY(130px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    main .sec-1 .flex-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main .sec-1 .flex-box a {
+        font-size: 12px;
+    }
+
+    main .sec-1 .flex-box>div {
+        padding: 8px;
+        gap: 25px;
+    }
+
+    main .sec-1 .flex-box>div:first-child {
+        padding: 20px 30px;
+    }
+
+    main .sec-1 .image-container {
+        width: 190px;
+        height: 180px;
+        position: relative;
+        top: 15px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 27px;
+        position: relative;
+        right: 5px;
+    }
+
+}
+
+
+
+@media (min-width: 701px) and (max-width: 800px) {
+    main .sec-1 h3 {
+        position: absolute;
+        font-size: 28px;
+        top: -99px;
+    }
+
+    main .sec-1 {
+        transform: translateY(130px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    main .sec-1 .flex-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main .sec-1 .flex-box a {
+        font-size: 12px;
+    }
+
+    main .sec-1 .flex-box>div {
+        padding: 8px;
+        gap: 25px;
+    }
+
+    main .sec-1 .flex-box>div:first-child {
+        padding: 20px 30px;
+    }
+
+    main .sec-1 .image-container {
+        width: 190px;
+        height: 180px;
+        position: relative;
+        top: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 819px) {
+
+    main {
+        height: 330px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 727px) {
+    header {
+        height: 100vh;
+    }
+
+    header .section-1 .image-container {
+        width: 30%;
+        height: 55vh;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 728px) {
+    header {
+        height: 100vh;
+    }
+
+    header .section-1 .image-container {
+        width: 30%;
+        height: 85vh;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        height: 500px;
+    }
+
+    header {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    main {
+        height: 500px;
+        width: 100%;
+    }
+
+    main .sec-1 .flex-box>div {
+        position: relative;
+        left: 170px;
+    }
+
+    main .sec-1 .image-container {
+        position: relative;
+        right: 160px;
+        height: 350px;
+        width: 330px;
+    }
+
+
+
+    header .section-1 .image-container {
+        opacity: 1;
+        animation: productimg 5s ease 0s;
+    }
+
+    @keyframes productimg {
+        from {
+            transform: scale(1.4);
+            opacity: 0;
+        }
+
+    }
+
+    header .section-1 .image-container {
+        top: -60px;
+    }
+
+    header {
+        height: 102vh;
+        width: 100%;
+    }
+
+    header .section-1 .text-container>p {
+        font-size: 30px;
+    }
+
+    header .section-1 .text-container>h2 {
+        font-size: 4em;
+    }
+
+
+
+    header .section-1 .text-container .icon-animation i {
+        right: 250px;
+        top: -15px;
+    }
+
+    header .section-1 .text-container .icons a i {
+        font-size: 27px;
+        position: relative;
+        right: 8px;
+    }
+
+    header .section-1 .text-container>a {
+        color: #eee;
+        background-color: var(--second-color);
+        padding: 0.9375em 2.1875em;
+        width: fit-content;
+        font-size: 20px;
+        font-weight: 650;
+        border-radius: 15px;
+        white-space: pre;
+        position: relative;
+        transition: var(--main-transition);
+        z-index: 111;
+        display: inline-block;
+        letter-spacing: 1pxz;
+        transition: 1s;
+        text-transform: uppercase;
+    }
+
+
+
+    header .section-1 .text-container>a:hover {
+        background-color: var(--second-color);
+        transform: scale(1.1);
+    }
+
+    header .section-1 .text-container>a:hover::before {
+        width: 100%;
+    }
+
+
+
+    .icons {
+        left: 30px;
+
+
+    }
+
+    header nav ul li a {
+        font-size: 33px;
+        font-weight: 700;
+        color: #3ac9f4;
+
+    }
+
+    header nav h1 {
+        padding-right: 400px;
+        font-size: 40px;
+    }
+
+    header div p {
+        font-size: 30px;
+    }
+
+    header section-1 .text-container h1 {
+        font-weight: 900;
+
+    }
+
+    header .section-1 .text-container {
+        position: relative;
+        top: -18px;
+    }
+
+    main .sec-1 h3 {
+        font-size: 50px;
+
+
+    }
+
+
+    .footer {
+        padding: 14px 50px;
+        font-size: 20px;
+    }
+}
+
+/* end-sec-1  */
+/* end-main */
